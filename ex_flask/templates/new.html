@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New | Flask</title>
+    <script
+      src="https://kit.fontawesome.com/75384426dc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        select.user-select {
+            font-family: fontAwesome;
+        }
+        .user-select-html {
+            color: red;
+        }
+        .user-select-css {
+            color: blue;
+        }
+        .user-select-js {
+            color: yellow;
+        }
+    </style>
+  </head>
+  <body>
+    <form action="/new" method="post">
+      <input type="text" name="user_id" id="" />
+      <input type="password" name="user_pwd" id="" />
+
+      <select class="user-select" name="user_select">
+        <option value="1" selected>
+            <span class="user-select-html">&#xf13b</span>
+            HTML
+        </option>
+        <option value="2">
+            <span class="user-select-css">&#xf38b</span>
+            CSS
+        </option>
+        <option value="3">
+            <span class="user-select-js">&#xf3b9</span>
+            JS
+        </option>
+      </select>
+      <input type="submit" value="SUBMIT" />
+    </form>
+  </body>
+</html>
