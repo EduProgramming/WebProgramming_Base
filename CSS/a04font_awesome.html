@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/75384426dc.js" crossorigin="anonymous"></script>
+    <style>
+        i.fa-heart {
+            cursor: pointer;
+            color: red;
+        }
+        div.heart {
+            background-color: aqua;
+            text-align: center;
+        }
+
+        div.number-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <i class="fa-solid fa-heart"></i>안녕
+    </div>
+
+    <div class="number-container">
+        <div>Number: </div>
+        <div id="num">0</div>
+        <div>
+            <button class="decrease-btn">-</button>
+            <button class="increase-btn">+</button>
+        </div>
+    </div>
+
+    <script>
+        const heart = document.querySelector('.fa-heart');
+        heart.addEventListener('click', () => {
+            if (heart.classList.contains('fa-solid')) {
+                heart.classList.remove('fa-solid');
+                heart.classList.add('fa-regular');
+            } else {
+                heart.classList.remove('fa-regular');
+                heart.classList.add('fa-solid');
+            }
+        })
+
+        const number = document.getElementById('num');
+        const increaseBtn = document.querySelector('.increase-btn');
+        const decreaseBtn = document.querySelector('.decrease-btn');
+        increaseBtn.addEventListener('click', () => {
+            let num = parseInt(number.innerText);
+            number.innerText = num + 1;
+        })
+        decreaseBtn.addEventListener('click', () => {
+            let num = parseInt(number.innerText);
+            if (num > 0) {
+                number.innerText = num - 1;
+            } else {
+                // 경고 (글씨 -> setTimeout 글씨 사라지게)
+            }
+        })
+    </script>
+</body>
+</html>
