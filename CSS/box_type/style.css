@@ -1,0 +1,15 @@
+.inline-block {
+  display: inline-block;
+  width: 500px;
+  background-color: blue;
+  color: white;
+}
+
+.inline-span {
+  width: 500px;
+  background-color: pink;
+}
+
+.block-div {
+  background-color: green;
+}

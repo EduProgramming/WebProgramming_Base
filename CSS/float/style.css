@@ -6,10 +6,13 @@
 .parent {
   width: 300px;
   margin: 0 auto;
+  background-color: beige;
 }
 
 .child {
+  width: 300px;
   height: 300px;
+  line-height: 300px; /* 줄 높이는 정하는 속성 */
   color: white;
   font-weight: bold;
   text-align: center;

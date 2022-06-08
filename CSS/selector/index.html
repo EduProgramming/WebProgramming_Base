@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Selector</h1>
+    <div class="child">Child</div>
+
+    <div class="parent">
+      <div class="child">요일</div>
+    </div>
+
+    <div class="day">
+      <ul>
+        <li>일</li>
+        <li>월</li>
+        <li>화</li>
+        <li class="current-day">수</li>
+        <li>목</li>
+        <li>금</li>
+        <li>토</li>
+      </ul>
+    </div>
+
+    <ol>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      <li>Four</li>
+      <li>Five</li>
+      <li>Six</li>
+      <li>Seven</li>
+    </ol>
+
+    <!-- 동적 가상 클래스 선택자 -->
+    <h2>동적 가상 클래스 선택자</h2>
+    <small>User Action Pseudo-classes</small>
+    <div class="user-container">
+      <input type="text" name="user-name" id="user-name" />
+      <button class="user-btn">BUTTON</button>
+    </div>
+  </body>
+</html>
