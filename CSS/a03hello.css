@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.check {
+    background-color: aqua;
+}
+
+/* CSS 주석
+ * * -> 모든 선택자
+ */
+
+ .sp-hover-test {
+    color: black;
+ }
+
+ .sp-hover-test:hover {
+    color: aqua;
+ }

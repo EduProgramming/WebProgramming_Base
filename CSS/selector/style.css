@@ -1,0 +1,79 @@
+.parent .child {
+  font-weight: bold;
+  color: blue;
+}
+
+.day li:first-child {
+  color: red;
+  font-weight: 400;
+}
+
+.day li:last-child {
+  color: blue;
+  font-weight: 400;
+}
+
+.day li:nth-child(4) {
+  font-weight: 700;
+}
+
+.current-day {
+  cursor: pointer;
+}
+
+.current-day + li::after {
+  content: "next day";
+  color: gray;
+}
+
+input {
+  outline: none;
+  box-shadow: none;
+}
+
+.user-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  min-width: 400px;
+}
+
+#user-name {
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+#user-name:hover {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+#user-name:focus {
+  border-color: #03c75a;
+}
+
+.user-btn {
+  margin: 20px 0 0 auto;
+  display: block;
+  width: 200px;
+  padding: 13px 0;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #03c75a;
+  color: white;
+  font-weight: 700;
+}
+
+.user-btn:hover {
+  background-color: #03ae50;
+}
+
+.user-btn:active {
+  background-color: #018f40;
+}
