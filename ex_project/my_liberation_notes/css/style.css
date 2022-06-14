@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: ghostwhite;
+}
+
+.day-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.day-container ul {
+  list-style: none;
+}
+
+.current-day {
+  font-weight: 700;
+  text-align: end;
+}
+
+.select-day {
+  color: #28a745;
+  font-weight: 700;
+  text-align: end;
+}
+
+.current-day::before {
+  content: "Today: ";
+  font-weight: 400;
+}
+
+.select-day::before {
+  content: "Selected Day: ";
+  font-weight: 400;
+  color: black;
+}
+
+.container {
+  margin: 0 auto;
+  width: 40%;
+  min-width: 400px;
+}
+
+.container h1 {
+  text-align: center;
+  line-height: 100px;
+}
+
+.hide {
+  display: none;
+}
+
+.calendar-container > div:first-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.current_diary > div:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#calendar-btn {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.diary-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.diary-content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.diary-content label {
+  font-weight: 700;
+}
+
+#diary-content {
+  width: 100%;
+  height: 20vw;
+  min-height: 200px;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  outline-color: #28a745;
+  resize: none;
+}
+
+.current_diary {
+  margin-bottom: 2.5rem;
+}
+
+#current-diary-create-btn {
+  background-color: white;
+  color: #28a745;
+  border: 1px solid #28a745;
+  min-width: 4rem;
+  min-height: 2rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+#current-diary-create-btn:hover {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+#current-diary-create-btn:active {
+  background-color: #24923e;
+}
+
+#before-diary-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  min-width: 9rem;
+  min-height: 2rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+#before-diary-btn:hover {
+  background-color: #5a6269;
+}
+
+#before-diary-btn:active {
+  background-color: #43494e;
+}
