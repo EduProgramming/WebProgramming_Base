@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/css/join.css" />
+    <link
+      rel="shortcut icon"
+      href="../static/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Join | 신입생 길라잡이</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <main>
+          <div class="auth-form">
+            <div class="auth-logo">
+              <a href="/">
+                <img src="../static/img/logo.png" alt="Logo" />
+              </a>
+            </div>
+            <div class="auth-form-header p-0">
+              <h1>Sign up to Guilder</h1>
+            </div>
+            <div class="auth-form-body mt-3">
+              <form id="join-form">
+                <div class="group">
+                  <div class="mb-3">
+                    <label for="user-code" class="form-label">학번(사번)</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="user-code"
+                      id="user-code"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="user-password" class="form-label">
+                      비밀번호
+                    </label>
+                    <span>
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="user-password"
+                        id="user-password"
+                        required
+                      />
+                    </span>
+                  </div>
+                  <div class="mb-3">
+                    <label for="user-password2" class="form-label">
+                      비밀번호 재확인
+                    </label>
+                    <span>
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="user-password2"
+                        id="user-password2"
+                        required
+                      />
+                    </span>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="user-name" class="form-label">이름</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="user-name"
+                      id="user-name"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="user-email" class="form-label">이메일</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="user-email"
+                      id="user-email"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="user-is-student" class="form-label">
+                      학생여부
+                    </label>
+                    <div>
+                      <div class="form-check form-check-inline mr-3">
+                        <label for="user-is-student" class="form-check-label">
+                          학생
+                        </label>
+
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="user-is-student"
+                          id="user-is-student"
+                          value="1"
+                          checked
+                          required
+                        />
+                      </div>
+                      <div class="form-check form-check-inline mr-3">
+                        <label for="user-is-teacher" class="form-check-label">
+                          선생님
+                        </label>
+
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="user-is-student"
+                          id="user-is-teacher"
+                          value="2"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3" id="user-student-information">
+                    <div class="mb-3">
+                      <label for="user-major" class="form-label"
+                        >학과선택</label
+                      >
+                      <select
+                        class="form-select"
+                        name="user-major"
+                        id="user-major"
+                      >
+                        <option selected>전공을 선택해주세요</option>
+                        <option value="1">컴퓨터공학과</option>
+                        <option value="2">국어국문학과</option>
+                        <option value="3">영문학과</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="user-grade" class="form-label"
+                        >학년선택</label
+                      >
+                      <select
+                        class="form-select"
+                        name="user-grade"
+                        id="user-grade"
+                      >
+                        <option selected>학년 선택</option>
+                        <option value="1">1학년</option>
+                        <option value="2">2학년</option>
+                        <option value="3">3학년</option>
+                        <option value="4">4학년</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn mt-3 w-100" id="join-btn">
+                    회원가입
+                  </button>
+                </div>
+              </form>
+            </div>
+            <p class="auth-login-callout mt-3">
+              이미 가입한 아이디가 있으신가요?
+              <a href="/login">로그인</a>
+            </p>
+          </div>
+        </main>
+      </div>
+      <div class="footer">
+        <ul class="d-flex justify-content-center">
+          <li class="me-3">
+            <a href="/site/terms">Terms</a>
+          </li>
+          <li class="me-3">
+            <a href="/site/privacy">Privacy</a>
+          </li>
+          <li class="me-3">
+            <a href="/site/security">Security</a>
+          </li>
+          <li class="me-3">
+            <a href="/site/security">Contact Guilder</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="../static/js/join.js"></script>
+  </body>
+</html>

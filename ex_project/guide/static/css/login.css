@@ -1,0 +1,107 @@
+/* COLOR 초록
+ * #2da44e
+ * :hover #2c974b
+ * :active hsla(137, 55%, 36%, 1) */
+
+ * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .auth-form {
+    width: 340px;
+    margin: 0 auto;
+  }
+  
+  .auth-logo {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-logo img {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .auth-form-header {
+    text-align: center;
+  }
+  
+  .auth-form-header > h1 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+  }
+  
+  .auth-form-body,
+  .auth-join-callout {
+    padding: 1rem;
+    font-size: 14px;
+    border: 1px solid hsla(210, 18%, 87%, 1);
+    border-radius: 6px;
+  }
+  
+  .auth-form-body {
+    background-color: #f6f8fa;
+  }
+  
+  .forget-password-link {
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 1.5rem;
+  }
+  
+  #login-btn {
+    background-color: #2da44e;
+    color: white;
+    font-weight: 700;
+    border: 1px solid;
+    box-shadow: 0 1px 0 rgba(27, 31, 36, 0.1) inset 0 1px 0
+      rgba(255, 255, 2 55 0.03);
+  }
+  
+  #login-btn:hover {
+    background-color: #2c974b;
+  }
+  
+  #login-btn:active {
+    background-color: hsla(137, 55%, 36%, 1);
+  }
+  
+  .auth-join-callout {
+    text-align: center;
+  }
+  
+  .auth-join-callout > a {
+    text-decoration: none;
+  }
+  
+  .auth-join-callout > a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer {
+    margin-top: 2.5rem;
+    padding: 2.5rem 0;
+  }
+  
+  .footer > ul {
+    list-style: none;
+  }
+  
+  .footer li a {
+    font-size: 12px;
+    color: #0969da;
+    text-decoration: none;
+  }
+  
+  .footer li:last-child a {
+    color: #57606a;
+  }
+  
+  .footer li:last-child a:hover {
+    color: #0969da;
+    text-decoration: underline;
+  }
+  

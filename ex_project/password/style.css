@@ -1,0 +1,20 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+  font-size: smaller;
+  color: #dc3545;
+}
+
+#password2-comment.show::after {
+  content: "비밀번호가 일치하지 않습니다.";
+}
+
+.password-agree::after {
+  content: "비밀번호가 일치합니다.";
+  color: #198754;
+  display: block;
+  font-size: smaller;
+}

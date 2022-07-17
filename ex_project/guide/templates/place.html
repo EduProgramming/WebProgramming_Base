@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "layout/header.html" %}
+    <link rel="stylesheet" href="../static/css/place.css" />
+    <title>맛집 | 신입생 길라잡이</title>
+  </head>
+  <body>
+    {% include "layout/navbar.html" %}
+    <div class="container-fluid">
+      <div id="map"></div>
+    </div>
+    {% include "layout/footer.html" %}
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=KAKAO_API_KEY작성"
+    ></script>
+    <script>
+      var container = document.getElementById("map");
+      var options = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3,
+      };
+
+      var map = new kakao.maps.Map(container, options);
+
+      map.setDraggable(true);
+    </script>
+  </body>
+</html>
