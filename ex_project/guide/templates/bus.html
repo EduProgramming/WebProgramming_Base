@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "layout/header.html" %}
+    <link rel="stylesheet" href="../static/css/bus.css" />
+    <title>교내버스 | 신입생 길라잡이</title>
+  </head>
+  <body>
+    {% include "layout/navbar.html" %}
+    <div class="bus-container py-5 light-theme">
+      <h1 class="my-3">교내버스 예약</h1>
+
+      <ul class="case">
+        <li>
+          <div class="seat"></div>
+          <small>예약</small>
+        </li>
+        <li>
+          <div class="seat selected"></div>
+          <small>선택</small>
+        </li>
+        <li>
+          <div class="seat occupied"></div>
+          <small>예약</small>
+        </li>
+      </ul>
+
+      <div class="seat-container">
+        <div class="row">
+          <div class="seat">1</div>
+          <div class="seat">2</div>
+          <div class="seat">3</div>
+          <div class="seat">4</div>
+        </div>
+        <div class="row">
+          <div class="seat">5</div>
+          <div class="seat">6</div>
+          <div class="seat">7</div>
+          <div class="seat">8</div>
+        </div>
+        <div class="row">
+          <div class="seat">9</div>
+          <div class="seat">10</div>
+          <div class="seat">11</div>
+          <div class="seat">12</div>
+        </div>
+        <div class="row">
+          <div class="seat">13</div>
+          <div class="seat">14</div>
+          <div class="seat">15</div>
+          <div class="seat">16</div>
+        </div>
+        <div class="row">
+          <div class="seat">17</div>
+          <div class="seat">18</div>
+          <div class="seat">19</div>
+          <div class="seat">20</div>
+        </div>
+        <div class="row">
+          <div class="seat">21</div>
+          <div class="seat">22</div>
+          <div class="seat">23</div>
+          <div class="seat">24</div>
+        </div>
+        <div class="row">
+          <div class="seat">25</div>
+          <div class="seat">26</div>
+          <div class="seat">27</div>
+          <div class="seat">28</div>
+        </div>
+        <div class="row">
+          <div class="seat">29</div>
+          <div class="seat">30</div>
+          <div class="seat">31</div>
+          <div class="seat">32</div>
+        </div>
+        <div class="row">
+          <div class="seat">33</div>
+          <div class="seat">34</div>
+          <div class="seat">35</div>
+          <div class="seat">36</div>
+        </div>
+        <div class="row">
+          <div class="seat">37</div>
+          <div class="seat">38</div>
+          <div class="seat">39</div>
+          <div class="seat">40</div>
+        </div>
+      </div>
+
+      {% if is_login %} {% if is_reservation %}
+      <button class="book-btn btn btn-danger" id="seat-cancel">예약취소</button>
+      {% else %}
+      <button class="book-btn btn btn-success" id="seat-book">예약</button>
+      {% endif %} {% else %}
+      <div class="my-3 bg-success text-white">
+        &nbsp🚨로그인을 하셔야 예약이 가능합니다🚨&nbsp
+      </div>
+      {% endif %}
+    </div>
+
+    {% include "layout/footer.html" %}
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../static/js/bus.js"></script>
+  </body>
+</html>

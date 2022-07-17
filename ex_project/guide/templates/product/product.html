@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "layout/header.html" %}
+    <link rel="stylesheet" href="../static/css/product/product.css" />
+    <title>아나바다 | 신입생 길라잡이</title>
+  </head>
+  <body>
+    {% include "layout/navbar.html" %}
+
+    <div class="product-container m-auto">
+      <div class="row my-3">
+        <span class="fw-bold text-primary">{{ data.get('category') }}</span>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 col-12">
+          <div class="product-img-slide-container">
+            {% if data.get('cnt') %} {% for idx in range(data.get('cnt')) %}
+            <div class="product-img-slides w-100 h-100">
+              <div class="product-img-number">
+                {{ idx+1 }} / {{ data.get('cnt') }}
+              </div>
+              <img
+                src="{{ data.get('imgs')[idx] }}"
+                class="product-image w-100 h-100"
+                alt=""
+              />
+            </div>
+            {% endfor %}
+
+            <a class="prev" id="img-slide-prev">❮</a>
+            <a class="next" id="img-slide-next">❯</a>
+
+            <div class="product-img-dots text-center">
+              {% for idx in range(data.get('cnt')) %}
+              <span class="dot"></span>
+              {% endfor %}
+            </div>
+            {% else %}
+            <div class="w-100 h-100">
+              <img
+                src="https://images.unsplash.com/photo-1511556820780-d912e42b4980?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt=""
+                class="product-image w-100 h-100"
+              />
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-lg-7 col-12 product-information">
+          <div class="product-title">{{ data.get('title') }}</div>
+          <div class="product-price">
+            {{ data.get('price') }}
+            <span>원</span>
+          </div>
+          <div class="text-secondary">
+            <i class="fa-regular fa-clock"></i>{{ data.get('created_at') }}
+          </div>
+          <div class="row">
+            <div class="col-6 col-lg-12 px-0 text-secondary">
+              <i class="fa-solid fa-eye"></i>
+              <span class="ms-1">{{ data.get('view') }}</span>
+            </div>
+            <div class="col-6 col-lg-12 px-0 text-secondary">
+              <!-- TODO: 해당 상품건으로 채팅 건적 있다면 fa-regular -> fa-solid -->
+              <i class="fa-regular fa-heart text-danger"></i>like
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-content py-5">
+        <span class="fs-5 fw-bold border-bottom border-3 border-secondary"
+          >상품 내용</span
+        >
+        <div class="mt-3">{{ data.get('content') }}</div>
+      </div>
+      {% if session.get('user_id') == data.get('user-id') %} 내가 작성한 글 {%
+      elif session.get('user_id') %}
+      <div class="row justify-content-center">
+        <button class="btn btn-outline-danger chat-btn">채 팅</button>
+      </div>
+      {% else %} 로그인을 해주세요. {% endif %}
+    </div>
+
+    {% include "layout/footer.html" %}
+    <script src="../../static/js/product/product.js"></script>
+  </body>
+</html>
