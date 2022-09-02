@@ -16,8 +16,14 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .media-test::after {
-    content: "1200px";
+    content: "1440px";
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .media-test::after {
+    content: "2560px";
   }
 }

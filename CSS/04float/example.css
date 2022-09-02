@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.cat-image {
+  width: 300px;
+  padding-right: 1rem;
+  margin: 1rem 0 0 1rem;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.image-content {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.image-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}

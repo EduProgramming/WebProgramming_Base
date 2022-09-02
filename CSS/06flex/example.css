@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 1000vh;
+}
+
+.navbar {
+  position: fixed;
+  background-color: black;
+  width: 100%;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  align-items: center;
+}
+
+.navbar-menu-item {
+  display: inline;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar .nav-left a {
+  margin-left: 1rem;
+}
+
+.navbar .nav-left li:nth-child(n + 2) a {
+  color: lightgray;
+}
+
+.navbar .nav-left li:nth-child(n + 2) a:hover {
+  color: white;
+}
+
+.navbar .nav-right a {
+  margin-right: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 30px;
+}
+
+.btn-success {
+  border: 1px solid #28a745;
+  background-color: #28a745;
+}
+
+.btn-success:hover {
+  border: 1px solid #29823e;
+  background-color: #29823e;
+}
+
+.btn-success:active {
+  border: 1px solid #266935;
+  background-color: #266935;
+}
+
+.btn-success-outline {
+  border: 1px solid #28a745;
+}
+
+.btn-success-outline:hover {
+  border: 1px solid #28a745;
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success-outline:active {
+  border: 1px solid #266935;
+  background-color: #266935;
+  color: white;
+}
